@@ -1,6 +1,6 @@
 import css from './filter.module.css';
 import { useDispatch } from 'react-redux';
-import { filterSlice } from '../Redux/FilterSlice';
+import { filterContacts } from '../Redux/FilterSlice';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ export const Filter = () => {
       <input
         type="text"
         name="filter"
-        onChange={(e) => dispatch(filterSlice(e.target.value))}
+        onChange={(e) => dispatch(filterContacts(e.target.value))}
         className={css.input}
        
       />
